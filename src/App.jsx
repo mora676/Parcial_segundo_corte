@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom'; 
 import Dashboard from './componets/Dashboard/Principal_Modules/Dashboard.jsx';
 import Home from './componets/Dashboard/Principal_Modules/Home.jsx';
 import TaskDisplay from './componets/Dashboard/Secondary_Modules/Task_List/TaskDisplay.jsx';

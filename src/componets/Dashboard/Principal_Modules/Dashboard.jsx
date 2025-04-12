@@ -4,6 +4,7 @@ import Options from './Options.jsx';
 import { Outlet } from "react-router-dom";
 
 function Dashboard() {
+  console.log('Dashboard cargado');
   return (
     <div className="dashboard-container">
       <header className="navbar">
