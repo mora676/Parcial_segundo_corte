@@ -1,21 +1,27 @@
-import { Link, Outlet } from 'react-router-dom';
+import React from "react";
+import Navbar from './Navbar.jsx';
+import Options from './Options.jsx';
+import { Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
-    <div className="dashboard">
-      <aside className="sidebar">
-        <h2>Menú</h2>
-        <ul>
-          <li><Link to="/tasks/pending">Tareas Pendientes</Link></li>
-          <li><Link to="/tasks/completed">Tareas Completadas</Link></li>
-          {/* Más enlaces de módulos si quieres */}
-        </ul>
-      </aside>
-      <main className="content">
-        <Outlet />
-      </main>
+    <div className="dashboard-container">
+      <header className="navbar">
+        <Navbar />
+      </header>
+
+      <div className="dashboard-body">
+        <aside className="sidebar">
+          <Options />
+        </aside>
+
+        <main className="content">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }
 
 export default Dashboard;
+

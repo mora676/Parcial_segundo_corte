@@ -3,7 +3,14 @@
     align-items: center;
     justify-content: center;
   }
-  
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+
   @mixin responsive-padding {
     padding: 1rem;
   

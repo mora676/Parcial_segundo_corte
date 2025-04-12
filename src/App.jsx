@@ -1,19 +1,19 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './componets/Dashboard/Principal_Modules/Dashboard.jsx';
-import TaskList from './componets/Dashboard/Secondary_Modules/TaskDisplay.jsx';
+import Home from './componets/Dashboard/Principal_Modules/Home.jsx';
+import TaskDisplay from './componets/Dashboard/Secondary_Modules/Task_List/TaskDisplay.jsx';
 import './styles/styles.scss';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/*" element={<Dashboard />}>
-            <Route path="tasks/:status" element={<TaskList />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/Dashboard" element={<Dashboard />}>
+          <Route index element={<Home />} />
+          <Route path="taskdisplay" element={<TaskDisplay />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/Dashboard" />} />
+      </Routes>
     </div>
   );
 }

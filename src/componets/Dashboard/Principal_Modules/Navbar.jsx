@@ -1,10 +1,13 @@
 import React from "react";
 
-
-export const Navbar = () => {
+function Navbar() {
     return (
-        <div>
-            Navbar
-        </div>
+        <div className="navbar_container">
+        <i>
+            Clase Front-End Johan Mora
+        </i>
+    </div>
     )
 }
+export default Navbar;
+
