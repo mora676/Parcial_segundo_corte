@@ -1,0 +1,27 @@
+
+.dashboard-container {
+display: flex;
+flex-direction: column;
+}
+  
+.main-task-options {
+background-color: red;
+height: 5rem;
+padding-top: 32px;
+padding-left: 30px;
+}
+
+.main-task-boxs {
+background-color: aqua;
+flex-grow: 1;
+
+}
+
+// .main-task-container{
+
+// }
+
+.tab{
+ width: 11rem;
+ height: 3rem;
+}

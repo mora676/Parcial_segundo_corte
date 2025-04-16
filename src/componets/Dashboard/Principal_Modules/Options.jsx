@@ -1,21 +1,21 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function Options() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="" className={({ isActive }) => isActive ? 'active' : ''}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="taskdisplay" className={({ isActive }) => isActive ? 'active' : ''}>
-            Gestor de Tareas
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <div className="d-grid gap-2">
+      <NavLink
+        to=""
+        className={({ isActive }) => `btn bt1 text-start ${isActive ? 'active' : ''}`}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="MainTask"
+        className={({ isActive }) => `btn bt1 text-start ${isActive ? 'active' : ''}`}
+      >
+        Gestor de Tareas
+      </NavLink>
+    </div>
   );
 }
 

@@ -7,20 +7,24 @@ function Dashboard() {
   console.log('Dashboard cargado');
   return (
     <div className="dashboard-container">
-      <header className="navbar">
-        <Navbar />
-      </header>
+      <div className="box-header">
+        <header className="navbar">
+          <Navbar />
+        </header>
+      </div>
 
-      <div className="dashboard-body">
-        <aside className="sidebar">
-          <Options />
-        </aside>
+      <div className="box-body ">
+          <div className="sidebar">
+            <Options />
+          </div>
 
-        <main className="content">
-          <Outlet />
-        </main>
+          <div className="content">
+            <Outlet />
+          </div>
       </div>
     </div>
+
+
   );
 }
 

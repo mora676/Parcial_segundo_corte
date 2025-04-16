@@ -6,82 +6,73 @@ body, html, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: colors.$text-color;
+  background-color: colors.$blanco;
 }
 
 .dashboard-container {
   display: flex;
-  height: 100vh;
   flex-direction: column;
+  min-height: 99.2vh;
+  margin-left: 4px;
+  margin-right: 4px;
+
+   /* Asegura que el contenedor ocupe toda la altura de la ventana */
 }
 
-.dashboard-body {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
+.box-header {
+  /* Puedes definir un tamaño fijo o dejar que se ajuste al contenido */
+  height: 60px; /* Ejemplo de altura fija para el header */
 }
+
+
+.box-body {
+  margin-top: 17px;
+  flex-grow: 1;
+  display: flex; /* Activa Flexbox */
+  gap: 5px; /* Espacio entre las columnas */
+}
+
+.bt1{
+  background-color: colors.$color-5 !important;
+  border-color: colors.$color-5 !important;
+  color: colors.$blanco !important;
+}
+
 
 .sidebar {
-  width: 250px;
-  background-color: #1f2937; // oscuro
-  color: white;
-  padding: 1rem;  
-  height: 100%;
+  // border: 2px solid colors.$negro; // borde negro de 2px de ancho
+  flex: 0 0 250px; /* Sidebar con un ancho fijo de 250px */
+  background-color: colors.$color-2;  
+  color: colors.$color-3;
+  padding: 1rem; 
   overflow-y: auto;
-  margin-top: 4rem;
-
+  border-radius: 10px; // Esto redondea las esquinas
 }
 
 .content {
+  opacity: 0.9; 
+  // background-image: url(../../../public/fondo.png);
   flex: 1;
-  padding: 19px;
-  overflow-y: auto;
-  background-color: #f1f5f9;
-  margin-top: 45px;
+  background-color: colors.$color-4;
+  background-size: cover;
+  background-position: center;
+  // border: 2px solid colors.$negro; // borde negro de 2px de ancho
+  border-radius: 10px; // Esto redondea las esquinas
 }
   
 .navbar_container {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 
-  background-color: colors.$secondary-color;
-  color: colors.$background-color;
+  background-color: colors.$color-5;  
+  color: colors.$color-3;
+  border-radius: 10px; // Esto redondea las esquinas
   height: 4rem;
-
-  // border-top-left-radius: 20px;
-  // border-top-right-radius: 20px;
-  // border-bottom-right-radius: 0px;
-  // border-bottom-left-radius: 0px;
 
   @include mixins.flex-center;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    margin: 0 1rem;
-  }
 }
 
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  margin-bottom: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-nav a.active {
-  font-weight: bold;
-  text-decoration: underline;
-}

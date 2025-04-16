@@ -1,32 +1,24 @@
-.task-display {
-    padding: 2rem;
-  
-    h2 {
-      color: #222;
-      margin-bottom: 1rem;
-    }
-  
-    ul {
-      list-style: none;
-      padding: 0;
-  
-      li {
-        padding: 0.75rem 1rem;
-        margin-bottom: 0.5rem;
-        border-left: 6px solid #ccc;
-        background-color: #fff;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      }
-  
-      .completed {
-        border-color: green;
-        color: #555;
-        text-decoration: line-through;
-      }
-  
-      .pending {
-        border-color: orange;
-      }
-    }
-  }
+.main-task{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+}
+
+.box-header {
+  /* Puedes definir un tamaño fijo o dejar que se ajuste al contenido */
+  height: 60px; /* Ejemplo de altura fija para el header */
+}
+
+
+.box-body {
+  margin-top: 17px;
+  flex-grow: 1;
+  display: flex; /* Activa Flexbox */
+  gap: 5px; /* Espacio entre las columnas */
+}
