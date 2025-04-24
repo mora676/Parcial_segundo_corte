@@ -1,3 +1,4 @@
+@use '../base/colors';
 
 .dashboard-container {
 display: flex;
@@ -5,23 +6,50 @@ flex-direction: column;
 }
   
 .main-task-options {
-background-color: red;
+// background-color: red;
 height: 5rem;
 padding-top: 32px;
 padding-left: 30px;
 }
 
 .main-task-boxs {
-background-color: aqua;
+// background-color: aqua;
 flex-grow: 1;
-
+margin-top: -2px;
 }
 
-// .main-task-container{
+.btn2{
+    margin-left: 4px;
+}
 
-// }
+.main-task-container{
+    margin-top: -1;
+    height: 10rem;
+    margin-left: 30px;
+    margin-right: 30px ;
+    background-color: colors.$blanco;
+    height: 36.2rem;
+    border: 2px solid rgb(62, 31, 6);
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px ;
+}
 
-.tab{
+.tab-btn{
  width: 11rem;
  height: 3rem;
+ background-color: colors.$blanco;
+ border: 2px solid rgb(62, 31, 6);
+ border-bottom-color: colors.$blanco ;
+//  border-radius: 8px;
+border-radius: 8px 8px 0 0;
+cursor: pointer;
+transition: all 0.2s ease;
 }
+
+
+.tab-btn.active {
+    border-bottom: none;
+    background-color: white;
+    z-index: 2;
+  }
